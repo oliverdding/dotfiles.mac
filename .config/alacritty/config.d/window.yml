@@ -1,11 +1,11 @@
 window:
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 120
+    lines: 30
 
   #position:
-  #  x: 0
-  #  y: 0
+    #x: 0
+    #y: 0
 
   padding:
     x: 10
@@ -17,6 +17,10 @@ window:
 
   opacity: 1.0
 
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
   startup_mode: Windowed
 
   title: Alacritty

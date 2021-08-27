@@ -4,6 +4,8 @@
 
 export PATH="$HOME/.local/bin:$HOME/.local/bin-private:/opt/local/bin:/opt/local/sbin:$PATH"
 
+export PATH="/opt/local/lib/postgresql13/bin:$PATH"
+
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US
 export LC_MONETARY=en_US.UTF-8
@@ -16,7 +18,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 
 export EDITOR=nvim
 export VISUAL=nvim
-export PAGER=less
+export PAGER=delta
 export DIFFPROG=delta
 export DOCKER_BUILDKIT=1
 export GO111MODULE=on
