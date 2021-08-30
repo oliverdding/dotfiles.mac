@@ -18,7 +18,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 
 export EDITOR=nvim
 export VISUAL=nvim
-export PAGER=delta
+export PAGER=less
 export DIFFPROG=delta
 export DOCKER_BUILDKIT=1
 export GO111MODULE=on
