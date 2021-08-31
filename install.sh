@@ -47,6 +47,7 @@ link ".bash_profile"
 link ".bashrc"
 
 link ".config/alacritty"
+link ".config/bash-completion/bash_completion"
 link ".config/bottom"
 link ".config/gdb/init"
 link ".config/git/config"
