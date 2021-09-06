@@ -25,6 +25,7 @@ export GO111MODULE=on
 export GOPROXY=https://goproxy.io,direct
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.local/share/cargo/env ]] && source ~/.local/share/cargo/env
 
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
