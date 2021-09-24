@@ -1,0 +1,6 @@
+#!/opt/local/bin/dash
+
+set -e
+
+cd $QAPM_HOME/emr/spark/scala/QAPMSparkProject
+sbt assembly

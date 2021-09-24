@@ -36,3 +36,5 @@ export K9SCONFIG=$XDG_CONFIG_HOME/k9s
 export PYLINTRC=$XDG_CONFIG_HOME/pylint/config
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export LESSHISTFILE=-
+
+export QAPM_HOME=$HOME/Developer/QAPM
