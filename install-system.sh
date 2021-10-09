@@ -31,13 +31,13 @@ go\
 gopls\
 gping\
 helix\
-helm\
+helm-3.7\
 helm_select\
 hexyl\
 jmeter\
 k9s\
 kaf\
-kubectl\
+kubectl-1.22\
 kubectl_select\
 kubectx\
 lz4\
@@ -50,6 +50,7 @@ openjdk8\
 openssl\
 py39-pip\
 py39-setuptools\
+python39\
 python3_select\
 qemu\
 ripgrep\
@@ -60,6 +61,12 @@ sqlite3\
 starship\
 sudo\
 xplr\
+xsv\
 zellij\
 zenith\
 zstd
+
+sudo port select --set helm helm3.7
+sudo port select --set kubectl kubectl1.22
+sudo port select --set python3 python39
+sudo port select --set scala scala2.12
