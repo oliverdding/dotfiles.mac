@@ -13,17 +13,23 @@ dscacheutil -flushcache
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+mkdir -p ${HOME}/.config/bash-completion/bash_completion.d/
+curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ${HOME}/.config/bash-completion/bash_completion.d/docker-compose
+curl -L https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o ${HOME}/.config/bash-completion/bash_completion.d/docker
+
 sudo port install \
 alacritty\
 bandwhich\
 bash\
 bash-completion\
+bat\
 bottom\
 bzip2\
 curl\
 dash\
 dua-cli\
 exa\
+fd\
 git-delta\
 gitui\
 gnupg2\
@@ -55,8 +61,9 @@ python3_select\
 qemu\
 ripgrep\
 sbt\
-scala2.12\
+scala2.11\
 scala_select\
+sd\
 sqlite3\
 starship\
 sudo\
@@ -69,4 +76,4 @@ zstd
 sudo port select --set helm helm3.7
 sudo port select --set kubectl kubectl1.22
 sudo port select --set python3 python39
-sudo port select --set scala scala2.12
+sudo port select --set scala scala2.11

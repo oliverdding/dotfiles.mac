@@ -62,6 +62,7 @@ link ".config/starship.toml"
 link ".config/wgetrc"
 
 link ".local/bin/bujar"
+link ".local/bin/ch"
 link ".local/bin/client"
 link ".local/bin/gdb"
 link ".local/bin/grep"

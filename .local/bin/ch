@@ -1,0 +1,5 @@
+#!/opt/local/bin/dash
+
+set -e
+
+ssh -t mixed-22 "exec clickhouse-client -h clickhouse -m "$@""
