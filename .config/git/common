@@ -1,7 +1,13 @@
 [branch]
 	autosetuprebase = always
 
+[gpg]
+	program = gpg2
+
 [commit]
+	gpgsign = true
+
+[tag]
 	gpgsign = true
 
 [pager]

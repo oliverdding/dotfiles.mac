@@ -2,7 +2,25 @@
 
 set -e
 
+help() {
+    echo "usage: upjar [-r,-d]"
+}
+
+# 默认发布Debug
+TARGET_PATH="/tmp/oliverdding/QAPMSparkProject-assembly-6.1.jar"
+if [ -n "$1" ] ;then
+  if [ "$1" = "-r" ] ;then
+    TARGET_PATH="/tmp/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "-d" ] ;then
+    TARGET_PATH="/tmp/oliverdding/QAPMSparkProject-assembly-6.1.jar"
+  else
+    help
+    exit
+  fi
+fi
+
 CLIENT_POD=$(kubectl -n default get pods | grep client | head -1 | awk '{print $1}')
-kubectl -n default exec $CLIENT_POD -- hdfs dfs -rm -f /tmp/QAPMSparkProject-assembly-6.1.jar
 kubectl -n default cp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $CLIENT_POD:/tmp/QAPM-Spark-jar-by-oliverdding
-kubectl -n default exec $CLIENT_POD -- hdfs dfs -put /tmp/QAPM-Spark-jar-by-oliverdding /tmp/QAPMSparkProject-assembly-6.1.jar
+kubectl -n default exec $CLIENT_POD -- hdfs dfs -mkdir -p `dirname $TARGET_PATH`
+kubectl -n default exec $CLIENT_POD -- hdfs dfs -rm -f $TARGET_PATH
+kubectl -n default exec $CLIENT_POD -- hdfs dfs -put /tmp/QAPM-Spark-jar-by-oliverdding $TARGET_PATH

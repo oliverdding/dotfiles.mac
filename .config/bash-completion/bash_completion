@@ -4,6 +4,7 @@ source <(kaf completion bash)
 source <(kubectl completion bash)
 source <(helm completion bash)
 source <(rustup completions bash)
+[[ -r "/opt/local/share/bash-completion/completions/pass" ]] && source "/opt/local/share/bash-completion/completions/pass"
 
 files=$(ls -1 ${HOME}/.config/bash-completion/bash_completion.d/* 2>/dev/null)
 for file in $files

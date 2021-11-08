@@ -61,6 +61,9 @@ link ".config/zellij"
 link ".config/starship.toml"
 link ".config/wgetrc"
 
+link ".gnupg/dirmngr.conf"
+link ".gnupg/gpg.conf"
+
 link ".local/bin/bujar"
 link ".local/bin/ch"
 link ".local/bin/client"
@@ -72,9 +75,8 @@ link ".local/bin/ls"
 link ".local/bin/sh"
 link ".local/bin/sqlite3"
 link ".local/bin/upjar"
+link ".local/bin/vim"
 link ".local/bin/wget"
-
-link "Pictures/backgrounds"
 
 echo "############################"
 echo "configure others dotfiles..."

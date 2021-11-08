@@ -12,8 +12,13 @@ sudo scutil --set ComputerName oxygen
 dscacheutil -flushcache
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.clion ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false
 
 mkdir -p ${HOME}/.config/bash-completion/bash_completion.d/
+mkdir -p ${HOME}/.local/share/pass
 curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ${HOME}/.config/bash-completion/bash_completion.d/docker-compose
 curl -L https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o ${HOME}/.config/bash-completion/bash_completion.d/docker
 
@@ -36,10 +41,10 @@ gnupg2\
 go\
 gopls\
 gping\
-helix\
 helm-3.7\
 helm_select\
 hexyl\
+hurl\
 jmeter\
 k9s\
 kaf\
@@ -54,6 +59,8 @@ oha\
 onefetch\
 openjdk8\
 openssl\
+ouch\
+pass\
 py39-pip\
 py39-setuptools\
 python39\
@@ -75,5 +82,10 @@ zstd
 
 sudo port select --set helm helm3.7
 sudo port select --set kubectl kubectl1.22
-sudo port select --set python3 python39
+sudo port select --set pip pip39
+sudo port select --set pip3 pip39
+sudo port select --set python python39
+sudo port select --set python3 python311
 sudo port select --set scala scala2.11
+
+gpg --keyserver hkps://keys.openpgp.org/ --recv-keys FDD1CB5A5E14ED3E
