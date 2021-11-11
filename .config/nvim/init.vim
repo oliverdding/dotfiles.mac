@@ -77,9 +77,9 @@ set wildmode=list:longest,list:full                 " 1st Tab completes to longe
 let s:undodir = $XDG_CACHE_HOME . "/nvim/undo"
 if !isdirectory(s:undodir)| call mkdir(s:undodir, "p", 0700)| endif
 set path=.,/usr/include,,**                         " Add ** to the search path so :find x works recursively.
-if exists('+breakindent')| set breakindent| let &showbreak = '↳   '| set cpo+=n| end " Nicer line wrapping for long lines.
-if exists('&inccommand')| set inccommand=split| endif " Show search and replace as you type.
-if exists("&wildignorecase")| set wildignorecase| endif " Case insensitive file tab completion with :e.
+if exists('+breakindent')| set breakindent| let &showbreak = '↳   '| set cpo+=n| end  " Nicer line wrapping for long lines.
+if exists('&inccommand')| set inccommand=split| endif  " Show search and replace as you type.
+if exists("&wildignorecase")| set wildignorecase| endif  " Case insensitive file tab completion with :e.
 
 " Vim options }}}
 

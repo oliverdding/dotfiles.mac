@@ -62,6 +62,7 @@ link ".config/starship.toml"
 link ".config/wgetrc"
 
 link ".gnupg/dirmngr.conf"
+link ".gnupg/gpg-agent.conf"
 link ".gnupg/gpg.conf"
 
 link ".local/bin/bujar"

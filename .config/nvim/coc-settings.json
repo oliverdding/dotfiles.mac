@@ -1,27 +1,5 @@
 {
     "languageserver": {
-        "bash": {
-            "command": "bash-language-server",
-            "args": [
-                "start"
-            ],
-            "filetypes": [
-                "sh",
-                "bash"
-            ]
-        },
-        "cmake": {
-            "command": "cmake-language-server",
-            "filetypes": [
-                "cmake"
-            ],
-            "rootPatterns": [
-                "build/"
-            ],
-            "initializationOptions": {
-                "buildDirectory": "build"
-            }
-        },
         "go": {
             "command": "gopls",
             "args": [

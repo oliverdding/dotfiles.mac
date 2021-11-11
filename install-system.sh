@@ -54,10 +54,12 @@ kubectx\
 lz4\
 neofetch\
 neovim\
+nodejs16\
+npm8\
 nushell\
 oha\
 onefetch\
-openjdk8\
+openjdk17\
 openssl\
 ouch\
 pass\
@@ -76,6 +78,7 @@ starship\
 sudo\
 xplr\
 xsv\
+yarn\
 zellij\
 zenith\
 zstd
@@ -85,7 +88,7 @@ sudo port select --set kubectl kubectl1.22
 sudo port select --set pip pip39
 sudo port select --set pip3 pip39
 sudo port select --set python python39
-sudo port select --set python3 python311
+sudo port select --set python3 python39
 sudo port select --set scala scala2.11
 
 gpg --keyserver hkps://keys.openpgp.org/ --recv-keys FDD1CB5A5E14ED3E
