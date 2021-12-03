@@ -2,4 +2,4 @@
 
 set -e
 
-ssh -t mixed-22 "exec clickhouse-client -h clickhouse -m "$@""
+ssh -t mixed-22 "exec clickhouse-client -h clickhouse -u default -m "$@""

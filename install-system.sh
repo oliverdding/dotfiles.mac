@@ -24,6 +24,8 @@ curl -L https://raw.githubusercontent.com/docker/docker-ce/master/components/cli
 
 sudo port install \
 alacritty\
+autoconf\
+automake\
 bandwhich\
 bash\
 bash-completion\
@@ -35,9 +37,10 @@ dash\
 dua-cli\
 exa\
 fd\
+gcc8\
+gdb\
 git-delta\
 gitui\
-gnupg2\
 go\
 gopls\
 gping\
@@ -59,7 +62,7 @@ npm8\
 nushell\
 oha\
 onefetch\
-openjdk17\
+openjdk8\
 openssl\
 ouch\
 pass\
@@ -76,6 +79,7 @@ sd\
 sqlite3\
 starship\
 sudo\
+tokei\
 xplr\
 xsv\
 yarn\
@@ -83,6 +87,7 @@ zellij\
 zenith\
 zstd
 
+sudo port select --set gcc mp-gcc8
 sudo port select --set helm helm3.7
 sudo port select --set kubectl kubectl1.22
 sudo port select --set pip pip39

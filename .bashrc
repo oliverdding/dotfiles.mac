@@ -16,7 +16,6 @@ export PSQLRC=$XDG_CONFIG_HOME/pg/psqlrc
 export PSQL_HISTORY=$XDG_CACHE_HOME/pg/psql_history
 export WORKON_HOME=$XDG_DATA_HOME/virtualenvs
 export GDBHISTFILE=$XDG_DATA_HOME/gdb/history
-export GPG_TTY=$(tty)
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 export CARGO_HOME=$XDG_DATA_HOME/cargo

@@ -3,24 +3,38 @@
 set -e
 
 help() {
-    echo "usage: upjar [-r,-d]"
+    echo "usage: upjar [tencent, public, qq, gray, test, all]"
 }
 
-# 默认发布Debug
-TARGET_PATH="/tmp/oliverdding/QAPMSparkProject-assembly-6.1.jar"
+deploy() {
+    CLIENT_POD=$(kubectl -n default get pods | grep client | head -1 | awk '{print $1}')
+    kubectl -n default cp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $CLIENT_POD:/tmp/QAPM-Spark-jar-by-oliverdding
+    kubectl -n default exec $CLIENT_POD -- hdfs dfs -mkdir -p `dirname $1`
+    kubectl -n default exec $CLIENT_POD -- hdfs dfs -rm -f $1
+    kubectl -n default exec $CLIENT_POD -- hdfs dfs -put /tmp/QAPM-Spark-jar-by-oliverdding $1
+}
+
+TARGET_PATH="/bin/tdem/test/spark/oliverdding.jar"
 if [ -n "$1" ] ;then
-  if [ "$1" = "-r" ] ;then
-    TARGET_PATH="/tmp/QAPMSparkProject-assembly-6.1.jar"
-  elif [ "$1" = "-d" ] ;then
-    TARGET_PATH="/tmp/oliverdding/QAPMSparkProject-assembly-6.1.jar"
+  if [ "$1" = "tencent" ] ;then
+    deploy "/bin/tdem/tencent_public/spark/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "public" ] ;then
+    deploy "/bin/tdem/cloud_public/spark/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "qq" ] ;then
+    deploy "/bin/tdem/tencent_qq/spark/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "gray" ] ;then
+    deploy "/bin/tdem/gray/spark/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "test" ] ;then
+    deploy "/bin/tdem/test/spark/QAPMSparkProject-assembly-6.1.jar"
+  elif [ "$1" = "all" ] ;then
+    deploy "/bin/tdem/tencent_public/spark/QAPMSparkProject-assembly-6.1.jar"
+    deploy "/bin/tdem/cloud_public/spark/QAPMSparkProject-assembly-6.1.jar"
+    deploy "/bin/tdem/tencent_qq/spark/QAPMSparkProject-assembly-6.1.jar"
+    deploy "/bin/tdem/gray/spark/QAPMSparkProject-assembly-6.1.jar"
+    deploy "/bin/tdem/test/spark/QAPMSparkProject-assembly-6.1.jar"
   else
     help
     exit
   fi
 fi
 
-CLIENT_POD=$(kubectl -n default get pods | grep client | head -1 | awk '{print $1}')
-kubectl -n default cp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $CLIENT_POD:/tmp/QAPM-Spark-jar-by-oliverdding
-kubectl -n default exec $CLIENT_POD -- hdfs dfs -mkdir -p `dirname $TARGET_PATH`
-kubectl -n default exec $CLIENT_POD -- hdfs dfs -rm -f $TARGET_PATH
-kubectl -n default exec $CLIENT_POD -- hdfs dfs -put /tmp/QAPM-Spark-jar-by-oliverdding $TARGET_PATH
