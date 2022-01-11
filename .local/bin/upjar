@@ -8,10 +8,14 @@ help() {
 
 deploy() {
     CLIENT_POD=$(kubectl -n default get pods | grep client | head -1 | awk '{print $1}')
+    if [ -z "$CLIENT_POD" ] ;then
+      echo "cannot find the client pod, is it running?"
+      exit
+    fi
     kubectl -n default cp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $CLIENT_POD:/tmp/QAPM-Spark-jar-by-oliverdding
-    kubectl -n default exec $CLIENT_POD -- hdfs dfs -mkdir -p `dirname $1`
-    kubectl -n default exec $CLIENT_POD -- hdfs dfs -rm -f $1
-    kubectl -n default exec $CLIENT_POD -- hdfs dfs -put /tmp/QAPM-Spark-jar-by-oliverdding $1
+    kubectl -n default exec $CLIENT_POD -- hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p `dirname $1`
+    kubectl -n default exec $CLIENT_POD -- hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $1
+    kubectl -n default exec $CLIENT_POD -- hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/QAPM-Spark-jar-by-oliverdding $1
 }
 
 TARGET_PATH="/bin/tdem/test/spark/oliverdding.jar"

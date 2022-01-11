@@ -33,6 +33,7 @@ bat\
 bottom\
 bzip2\
 curl\
+clang-12\
 dash\
 dua-cli\
 exa\
@@ -88,6 +89,8 @@ zenith\
 zstd
 
 sudo port select --set gcc mp-gcc8
+sudo port select --set llvm mp-llvm-12
+sudo port select --set clang mp-clang-12
 sudo port select --set helm helm3.7
 sudo port select --set kubectl kubectl1.22
 sudo port select --set pip pip39
