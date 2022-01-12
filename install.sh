@@ -69,7 +69,7 @@ link ".local/share/cargo/config"
 link ".local/share/gnupg/dirmngr.conf"
 link ".local/share/gnupg/gpg-agent.conf"
 link ".local/share/gnupg/gpg.conf"
-link ".local/share/gradle/init.gradle.kts"
+# link ".local/share/gradle/init.gradle.kts"
 
 link ".local/bin/bujar"
 link ".local/bin/ch"
@@ -83,9 +83,9 @@ link ".local/bin/sqlite3"
 link ".local/bin/upjar"
 link ".local/bin/vim"
 
-link ".m2/settings.xml"
+# link ".m2/settings.xml"
 
-link ".sbt/repositories"
+# link ".sbt/repositories"
 
 link "Library/LaunchAgents/10.environment.xdg.plist"
 link "Library/LaunchAgents/20.environment.lang.plist"
