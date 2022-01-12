@@ -27,3 +27,8 @@ copy() {
 }
 
 copy "etc/paths.d/10-system"
+copy "opt/local/etc/profile.d/10-paths.sh"
+copy "opt/local/etc/profile.d/30-toolsets.sh"
+copy "opt/local/etc/profile.d/50-program.sh"
+copy "opt/local/etc/profile.d/99-eval.sh"
+copy "opt/local/etc/profile"

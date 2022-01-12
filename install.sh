@@ -93,7 +93,6 @@ link "Library/LaunchAgents/30.environment.system.plist"
 link "Library/LaunchAgents/50.environment.program.plist"
 link "Library/LaunchAgents/60.environment.program.work.plist"
 link "Library/LaunchAgents/70.environment.program.xdg.plist"
-link "Library/LaunchAgents/90.environment.pass.plist"
 
 chmod 700 $HOME/.ssh
 chmod 700 $HOME/.local/share/gnupg
