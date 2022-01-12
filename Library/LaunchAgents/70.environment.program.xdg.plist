@@ -20,6 +20,7 @@
 					/bin/launchctl setenv INPUTRC "$HOME/.config/readline/inputrc"
 					/bin/launchctl setenv RIPGREP_CONFIG_PATH "$HOME/.config/ripgrep/config"
 					/bin/launchctl setenv GDBHISTFILE "$HOME/.local/share/gdb/history"
+					/bin/launchctl setenv KREW_ROOT "$HOME/.local/share/krew"
 					/bin/launchctl setenv RUSTUP_HOME "$HOME/.local/share/rustup"
 					/bin/launchctl setenv CARGO_HOME "$HOME/.local/share/cargo"
 					/bin/launchctl setenv GOPATH "$HOME/.local/share/go"

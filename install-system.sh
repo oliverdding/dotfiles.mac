@@ -84,7 +84,6 @@ tokei\
 xplr\
 xsv\
 yarn\
-zellij\
 zenith\
 zstd
 
