@@ -8,7 +8,7 @@ M.setup_lsp = function(attach, capabilities)
     local servers = {
         "rust_analyzer", -- rust
         "gopls", -- go
-        "sumneko_lua", -- lua
+        "sumneko_lua" -- lua
     }
 
     for _, lsp in ipairs(servers) do
@@ -24,7 +24,7 @@ M.setup_lsp = function(attach, capabilities)
     lspconfig.clangd.setup {
         on_attach = attach,
         capabilities = capabilities,
-        cmd = { "clangd-mp-12" },
+        cmd = {"clangd-mp-12"}
     }
 end
 
