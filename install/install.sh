@@ -49,7 +49,7 @@ defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.clion ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false
 
-port install -bcqN bash bash-completion bat bottom curl dash exa fd fzf git git-delta gitui gnupg2 neovim openssl pass ripgrep starship xplr zoxide zstd
+port install -bcqN bash bash-completion bat bottom curl dash exa fd fzf git git-delta gitui gnupg2 neovim openssl pass ripgrep tree-sitter starship xplr zoxide zstd
 port install -bcqN hexyl hurl dua-cli onefetch ouch tokei xsv zellij
 port install -bcqN kubectl-1.23 kubectl_select krew helm-2.15 helm-3.7 helm_select k9s kaf
 port install -bcqN qemu
