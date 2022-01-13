@@ -108,6 +108,4 @@ echo "configure others dotfiles..."
 echo "############################"
 
 if [[ -d "$HOME/.config/nvim" ]]; then git -C $HOME/.config/nvim pull; else git clone https://github.com/NvChad/NvChad.git $HOME/.config/nvim --depth 1; fi
-link ".config/nvim/lua/custom/chadrc.lua"
-link ".config/nvim/lua/custom/init.lua"
-link ".config/nvim/lua/custom/plugins/lspconfig.lua"
+link ".config/nvim/lua/custom"
