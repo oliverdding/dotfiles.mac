@@ -58,6 +58,7 @@ port install -bcqN go gopls
 port install -bcqN pipenv virtualenv_select python39 py39-pip py39-setuptools py39-yaml py39-wheel python_select python3_select
 port install -bcqN openjdk8 maven3 maven_select gradle gradle-completion sbt scala2.11 scala2.11-docs scala2.12 scala2.12-docs scala2.13 scala2.13-docs scala_select
 port install -bcqN nodejs16 npm8 yarn
+port install -bcqN gopls
 
 port select --set kubectl kubectl1.23
 port select --set helm helm3.7
