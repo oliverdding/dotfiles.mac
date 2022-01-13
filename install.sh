@@ -51,6 +51,7 @@ echo "linking user's dotfiles..."
 echo "##########################"
 
 link ".bash_profile"
+link ".bashrc"
 
 link ".config/alacritty"
 link ".config/bottom"
