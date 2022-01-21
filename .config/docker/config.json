@@ -1,16 +1,6 @@
 {
-  "bip": "172.22.0.1/16",
-  "dns": [
-    "8.8.8.8",
-    "114.114.114.114"
-  ],
-  "features": {
-    "buildkit": true
-  },
-  "insecure-registries": [
-    "bk.artifactory.oa.com:8080"
-  ],
-  "registry-mirrors": [
-    "http://csighub.tencentyun.com"
-  ]
+	"auths": {
+		"https://index.docker.io/v1/": {}
+	},
+	"credsStore": "osxkeychain"
 }
