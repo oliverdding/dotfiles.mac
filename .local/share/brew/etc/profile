@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# Load profiles from $HOME/.local/share/brew/etc/profile.d
-if test -d $HOME/.local/share/brew/etc/profile.d/; then
-    for profile in $HOME/.local/share/brew/etc/profile.d/*.sh; do
-        test -r "$profile" && . "$profile"
-    done
-    unset profile
-fi
