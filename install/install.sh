@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$(id -u)" -ne 0 ]; then
+        echo 'This script must be run by root' >&2
+        exit 1
+fi
+
 set -uo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
@@ -44,7 +49,3 @@ defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false
 
 cat '/opt/local/bin/bash' >>/etc/shells
 chsh -s /opt/local/bin/bash $USERNAME
-
-export RUSTUP_HOME=$HOME/.local/share/rustup
-export CARGO_HOME=$HOME/.local/share/cargo
-curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh -s -- -q -y --default-host $RUSTUP_HOST --no-modify-path --default-toolchain nightly --profile default --component llvm-tools-preview clippy rust-analyzer-preview rust-src
