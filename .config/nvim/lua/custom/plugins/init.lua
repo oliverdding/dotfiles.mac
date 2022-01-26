@@ -1,6 +1,14 @@
 local customPlugins = require "core.customPlugins"
 
 customPlugins.add(function(use)
+    -- ui
+    use {"nathom/filetype.nvim"}
+
+    use {
+        "luukvbaal/stabilize.nvim",
+        config = function() require("stabilize").setup() end
+    }
+
     -- lsp
     use {
         "neovim/nvim-lspconfig",
@@ -24,17 +32,18 @@ customPlugins.add(function(use)
     }
 
     -- completion
-
-    use {"rafamadriz/friendly-snippets", event = "InsertEnter"}
+    use {"rafamadriz/friendly-snippets", opt = true, event = "InsertEnter"}
 
     use {
         "hrsh7th/nvim-cmp",
+        opt = true,
         after = "friendly-snippets",
         config = function() require "custom.plugins.cmp" end
     }
 
     use {
         "L3MON4D3/LuaSnip",
+        opt = true,
         wants = "friendly-snippets",
         after = "nvim-cmp",
         config = function()
@@ -47,18 +56,19 @@ customPlugins.add(function(use)
         end
     }
 
-    use {"saadparwaiz1/cmp_luasnip", after = "LuaSnip"}
+    use {"saadparwaiz1/cmp_luasnip", opt = true, after = "LuaSnip"}
 
-    use {"hrsh7th/cmp-nvim-lua", after = "cmp_luasnip"}
+    use {"hrsh7th/cmp-nvim-lua", opt = true, after = "cmp_luasnip"}
 
-    use {"hrsh7th/cmp-nvim-lsp", after = "cmp-nvim-lua"}
+    use {"hrsh7th/cmp-nvim-lsp", opt = true, after = "cmp-nvim-lua"}
 
-    use {"hrsh7th/cmp-buffer", after = "cmp-nvim-lsp"}
+    use {"hrsh7th/cmp-buffer", opt = true, after = "cmp-nvim-lsp"}
 
-    use {"hrsh7th/cmp-path", after = "cmp-buffer"}
+    use {"hrsh7th/cmp-path", opt = true, after = "cmp-buffer"}
 
     use {
         "windwp/nvim-autopairs",
+        opt = true,
         after = "nvim-cmp",
         config = function()
             local autopairs = require "nvim-autopairs"
