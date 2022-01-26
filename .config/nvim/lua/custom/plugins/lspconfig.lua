@@ -18,7 +18,7 @@ local lspconfig = require("lspconfig")
 
 -- Defaultly setup LSP
 
-local servers = {"gopls", "rust_analyzer", "sumneko_lua"}
+local servers = {"clangd", "gopls", "rust_analyzer", "sumneko_lua"}
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -29,9 +29,3 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Customizedly setup LSP
-
-lspconfig.clangd.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    cmd = {"clangd-mp-12"}
-}

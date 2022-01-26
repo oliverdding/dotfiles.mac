@@ -9,7 +9,7 @@ sudo port install -bcqN bash bash-completion bat bottom curl dash exa fd fzf git
 sudo port install -bcqN hexyl hurl dua-cli rmtrash onefetch glow ouch tokei
 sudo port install -bcqN kubectl-1.23 kubectl_select krew helm-2.15 helm-3.7 helm_select k9s kaf
 sudo port install -bcqN qemu
-sudo port install -bcqN clang-13 llvm-13 lldb-13 clang_select
+sudo port install -bcqN clang-13 llvm-13 lldb-13 cmake ninja clang_select
 sudo port install -bcqN lua lua-language-server
 sudo port install -bcqN go gopls delve
 sudo port install -bcqN pipenv virtualenv_select python310 py310-pip py310-setuptools py310-debugpy py310-wheel python_select python3_select
@@ -18,12 +18,16 @@ sudo port install -bcqN nodejs16 npm8
 
 sudo port select --set kubectl kubectl1.23
 sudo port select --set helm helm3.7
+
+sudo port select --set llvm mp-llvm-13
 sudo port select --set clang mp-clang-13
-sudo port select --set virtualenv virtualenv39
-sudo port select --set pip pip39
-sudo port select --set pip3 pip39
-sudo port select --set python python39
-sudo port select --set python3 python39
+
+sudo port select --set pip pip310
+sudo port select --set pip3 pip310
+sudo port select --set python python310
+sudo port select --set python3 python310
+sudo port select --set virtualenv virtualenv310
+
 sudo port select --set scala scala2.11
 sudo port select --set maven maven3
 
