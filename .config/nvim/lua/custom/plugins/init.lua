@@ -9,11 +9,6 @@ customPlugins.add(function(use)
         config = function() require("stabilize").setup() end
     }
 
-    use {
-        "folke/which-key.nvim",
-        config = function() require("which-key").setup() end
-    }
-
     -- lsp
     use {
         "neovim/nvim-lspconfig",
@@ -86,59 +81,4 @@ customPlugins.add(function(use)
         end
     }
 
-    -- dap
-    use {
-        "mfussenegger/nvim-dap",
-        disable = true,
-        module = "dap",
-        opt = true,
-        after = "nvim-lspconfig",
-        config = function() require "custom.plugins.dap" end
-    }
-
-    use {
-        "rcarriga/nvim-dap-ui",
-        disable = true,
-        module = "dapui",
-        opt = true,
-        after = "nvim-dap",
-        config = function() require("dapui").setup() end
-    }
-
-    use {
-        "theHamsta/nvim-dap-virtual-text",
-        disable = true,
-        module = "nvim-dap-virtual-text",
-        opt = true,
-        after = "nvim-dap",
-        config = function() require("nvim-dap-virtual-text").setup() end
-    }
-
-    use {
-        "nvim-telescope/telescope-dap.nvim",
-        disable = true,
-        opt = true,
-        after = {"telescope.nvim", "nvim-dap"},
-        config = function() require('telescope').load_extension('dap') end
-    }
-
-    -- dap-plugins
-
-    use {
-        "leoluz/nvim-dap-go",
-        disable = true,
-        module = "dap-go",
-        opt = true,
-        after = "nvim-dap",
-        config = function() require("dap-go").setup() end
-    }
-
-    use {
-        "mfussenegger/nvim-dap-python",
-        disable = true,
-        module = "dap-python",
-        opt = true,
-        after = "nvim-dap",
-        config = function() require("dap-python").setup("python") end
-    }
 end)

@@ -22,6 +22,10 @@ M.plugins = {
         nvim_tree = {
             view = {side = 'right', auto_resize = true},
             trash = {cmd = "rmtrash", require_confirm = true}
+        },
+        gitsigns = {
+            current_line_blame = true,
+            current_line_blame_opts = {ignore_whitespace = true}
         }
     }
 }
