@@ -15,7 +15,19 @@ customPlugins.add(function(use)
         config = function() require "custom.plugins.whichkey" end
     }
 
-    use {"mfussenegger/nvim-dap", after = "nvim-lspconfig"}
+    use {
+        "mfussenegger/nvim-dap",
+        after = "nvim-lspconfig",
+        config = function() require "custom.plugins.dap" end
+    }
+
+    use {
+        "theHamsta/nvim-dap-virtual-text",
+        after = {"nvim-dap", "nvim-treesitter"},
+        config = function()
+            require("nvim-dap-virtual-text").setup {commented = true}
+        end
+    }
 
     use {
         "leoluz/nvim-dap-go",

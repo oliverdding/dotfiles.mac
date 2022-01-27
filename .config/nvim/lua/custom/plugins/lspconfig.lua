@@ -3,7 +3,7 @@ local M = {}
 M.setup_lsp = function(attach, capabilities)
     local lspconfig = require "lspconfig"
 
-    local servers = {"clangd", "gopls", "rust_analyzer", "sumneko_lua"}
+    local servers = {"clangd", "gopls", "pyright", "rust_analyzer", "sumneko_lua"}
 
     for _, lsp in ipairs(servers) do
         lspconfig[lsp].setup {
