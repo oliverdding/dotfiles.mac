@@ -5,6 +5,7 @@ M.options = {relativenumber = true, tabstop = 4, shiftwidth = 4}
 M.ui = {italic_comments = true, theme = "gruvbox"}
 
 M.plugins = {
+    install = require "custom.plugins",
     status = {colorizer = true},
     options = {
         lspconfig = {setup_lspconf = "custom.plugins.lspconfig"},

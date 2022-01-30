@@ -1,11 +1,8 @@
-local customPlugins = require "core.customPlugins"
-
-customPlugins.add(function(use)
+return {
     -- ui
-    use {"nathom/filetype.nvim"}
-
-    use {
+    {"nathom/filetype.nvim"},
+    {
         "luukvbaal/stabilize.nvim",
         config = function() require("stabilize").setup() end
-    }
-end)
+    },
+}
