@@ -44,7 +44,6 @@ mkdir -p "$HOME"/.local/share/icons
 mkdir -p "$HOME"/.local/share/pass
 mkdir -p "$HOME"/.local/share/themes
 mkdir -p "$HOME"/.local/share/git
-touch $HOME/.local/share/git/git-credentials
 
 echo "##########################"
 echo "linking user's dotfiles..."
@@ -97,7 +96,6 @@ link "Library/LaunchAgents/70.environment.program.xdg.plist"
 chmod 700 $HOME/.ssh
 chmod 700 $HOME/.local/share/gnupg
 chmod 700 $HOME/.local/share/pass
-chmod 700 $HOME/.local/share/git/git-credentials
 
 echo "############################"
 echo "configure others dotfiles..."
