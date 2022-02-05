@@ -1,3 +1,0 @@
-set history filename "$XDG_CONFIG_HOME"/gdb/history
-set history save on
-set print array-indexes on

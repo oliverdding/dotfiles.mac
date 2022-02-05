@@ -1,3 +1,0 @@
-#!/opt/local/bin/dash
-
-/opt/local/bin/ggdb -nh -x "$XDG_CONFIG_HOME"/gdb/init "$@"

@@ -1,3 +1,0 @@
-#!/opt/local/bin/dash
-
-/opt/local/bin/sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc

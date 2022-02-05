@@ -22,11 +22,3 @@
 
 1. 系统初始化[install.sh](/install/install.sh)
 2. 软件包安装[port.sh](/install/port.sh)
-
-## TODO
-
-不再保证XDG
-
-1. 移除XDG配置
-2. GNUPG移回根目录
-3. node, npm, gradle, go, krew配置确认

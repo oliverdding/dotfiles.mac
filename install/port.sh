@@ -31,11 +31,8 @@ sudo port select --set virtualenv virtualenv310
 sudo port select --set scala scala2.11
 sudo port select --set maven maven3
 
-export KREW_ROOT=$HOME/.local/share/krew
-export PATH=$HOME/.local/share/krew/bin:$PATH
+export PATH=$HOME/.krew/bin:$PATH
 krew update
 krew install ns ctx
 
-export RUSTUP_HOME=$HOME/.local/share/rustup
-export CARGO_HOME=$HOME/.local/share/cargo
 curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh -s -- -q -y --default-host $RUSTUP_HOST --no-modify-path --default-toolchain nightly --profile default --component llvm-tools-preview clippy rust-analyzer-preview rust-src
