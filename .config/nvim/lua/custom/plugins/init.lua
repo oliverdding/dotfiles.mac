@@ -1,6 +1,5 @@
 return {
     -- ui
-    {"nathom/filetype.nvim"},
     {
         "luukvbaal/stabilize.nvim",
         config = function() require("stabilize").setup() end

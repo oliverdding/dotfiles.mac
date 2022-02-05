@@ -8,7 +8,7 @@ fi
 sudo port install -bcqN bash bash-completion bat bottom curl dash exa fd fzf git git-delta gitui gnupg2 less neovim pass ripgrep starship xplr zoxide zstd
 sudo port install -bcqN hexyl hurl dua-cli rmtrash onefetch glow ouch tokei
 sudo port install -bcqN kubectl-1.23 kubectl_select krew helm-2.15 helm-3.8 helm_select k9s kaf
-sudo port install -bcqN qemu
+sudo port install -bcqN qemu docker docker-compose colima
 sudo port install -bcqN clang-13 llvm-13 lldb-13 cmake ninja clang_select
 sudo port install -bcqN lua lua-language-server
 sudo port install -bcqN go gopls delve
