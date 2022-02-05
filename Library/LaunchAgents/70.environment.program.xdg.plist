@@ -9,6 +9,7 @@
 				<string>/bin/sh</string>
 				<string>-c</string>
 				<string>
+					/bin/launchctl setenv DOCKER_CONFIG "$HOME/.config/docker"
 					/bin/launchctl setenv GRADLE_USER_HOME "$HOME/.local/share/gradle"
 					/bin/launchctl setenv NPM_CONFIG_USERCONFIG "$HOME/.config/npm/npmrc"
 					/bin/launchctl setenv NODE_REPL_HISTORY "$HOME/.local/share/node_repl_history"
