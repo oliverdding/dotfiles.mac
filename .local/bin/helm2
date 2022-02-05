@@ -1,3 +1,0 @@
-#!/opt/local/bin/dash
-
-/opt/local/bin/helm2.15 "$@"
