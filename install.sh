@@ -51,6 +51,7 @@ link ".config/fd/ignore"
 link ".config/git/config"
 link ".config/git/common"
 link ".config/git/ignore"
+link ".config/nvim/lua/custom"
 link ".config/bash_completion"
 link ".config/starship.toml"
 
