@@ -1,5 +1,7 @@
 # dotfiles for mac
 
+> ATTENTION: 由于mac对于system-wide environment variable支持较差（gui程序），通过user launchd file(plist)支持，但存在种种缺陷。我投降，不再遵守XDG。
+
 ## Dependency
 
 ### 应用商店

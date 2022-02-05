@@ -48,7 +48,6 @@ link ".cargo/config"
 
 link ".config/bottom"
 link ".config/fd/ignore"
-link ".config/gdb/init"
 link ".config/git/config"
 link ".config/git/common"
 link ".config/git/ignore"
