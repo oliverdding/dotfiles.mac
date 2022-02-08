@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export PATH="$HOME/.local/opt/spark/current/bin:$PATH"
 export PATH="$HOME/.krew/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
