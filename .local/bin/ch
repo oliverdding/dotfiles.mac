@@ -1,5 +1,23 @@
-#!/opt/local/bin/dash
+#!/opt/local/bin/bash
 
 set -e
 
-ssh -t mixed-main-22 "exec clickhouse-client -h clickhouse -u default -m "$@""
+help() {
+    echo "usage: $0 [gr, gd, br] [parameters passed to clickhouse-client]"
+    exit
+}
+
+if [ -n "$1" ] ;then
+  if [ "$1" = "gr" ] ;then
+    HOST='10.16.0.85'
+  elif [ "$1" = "gd" ] ;then
+    HOST='10.16.30.14'
+  elif ["$1" = "br" ] ;then
+    HOST='10.90.0.15'
+  else
+    help
+  fi
+fi
+
+shift
+ssh -t mixed-main-22 "exec clickhouse-client -h ${HOST} -u default -m "$@""
