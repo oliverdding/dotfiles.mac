@@ -65,6 +65,7 @@ link ".local/bin/bujar"
 link ".local/bin/ch"
 link ".local/bin/client"
 link ".local/bin/k"
+link ".local/bin/llvm-objcopy"
 link ".local/bin/ls"
 link ".local/bin/upjar"
 

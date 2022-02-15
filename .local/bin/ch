@@ -12,7 +12,7 @@ if [ -n "$1" ] ;then
     HOST='10.16.0.85'
   elif [ "$1" = "gd" ] ;then
     HOST='10.16.30.14'
-  elif ["$1" = "br" ] ;then
+  elif [ "$1" = "br" ] ;then
     HOST='10.90.0.15'
   else
     help
