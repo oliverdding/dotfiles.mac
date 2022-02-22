@@ -4,3 +4,6 @@
 [submodule ".config/git"]
 	path = .config/git
 	url = https://github.com/oliverdding/.config-git.git
+[submodule ".config/alacritty"]
+	path = .config/alacritty
+	url = https://github.com/oliverdding/.config-alacritty.git

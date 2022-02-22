@@ -46,6 +46,13 @@ echo "##########################"
 
 link ".cargo/config"
 
+link ".config/alacritty/config.d/10-window.yml"
+link ".config/alacritty/config.d/20-colors.yml"
+link ".config/alacritty/config.d/30-font.yml"
+link ".config/alacritty/config.d/35-cursor.yml"
+link ".config/alacritty/config.d/40-keys.yml"
+link ".config/alacritty/config.d/99-os-macos.yml" ".config/alacritty/config.d/99-os.yml"
+link ".config/alacritty/alacritty.yml"
 link ".config/bottom"
 link ".config/fd/ignore"
 link ".config/git/config"
