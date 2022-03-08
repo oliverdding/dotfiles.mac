@@ -2,5 +2,4 @@
 
 set -e
 
-CLIENT_POD=$(kubectl -n default get pods | grep client | head -1 | awk '{print $1}')
-kubectl -n default exec -it $CLIENT_POD -- bash "$@"
+kubectl -n default exec -it deploy/kdl-client -- bash "$@"
