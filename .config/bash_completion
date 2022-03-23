@@ -2,7 +2,7 @@
 
 source <(kaf completion bash)
 source <(kubectl completion bash)
-source <(helm completion bash)
+# source <(helm completion bash)
 source <(rustup completions bash)
 source <(krew completion bash)
 source <(colima completion bash)
