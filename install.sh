@@ -83,6 +83,8 @@ link ".bash_profile"
 link ".bashrc"
 
 chmod 700 $HOME/.ssh
+chmod 700 $HOME/.gnupg
+chmod 700 $HOME/.password-store
 
 echo "############################"
 echo "configure others dotfiles..."

@@ -51,3 +51,5 @@ copy "Library/LaunchDaemons/limit.maxfiles.plist"
 
 cat '/opt/local/bin/bash' >>/etc/shells
 chsh -s /opt/local/bin/bash $USERNAME
+
+git clone git@github.com:oliverdding/pass.git ~/.password-store
