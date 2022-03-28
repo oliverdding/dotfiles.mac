@@ -53,7 +53,7 @@ link ".config/alacritty/config.d/35-cursor.yml"
 link ".config/alacritty/config.d/40-keys.yml"
 link ".config/alacritty/config.d/99-os-macos.yml" ".config/alacritty/config.d/99-os.yml"
 link ".config/alacritty/alacritty.yml"
-# link ".config/bottom"
+link ".config/bottom"
 link ".config/fd/ignore"
 link ".config/git/config"
 link ".config/git/common"
@@ -66,8 +66,6 @@ link ".gnupg/dirmngr.conf"
 # link ".gnupg/gpg-agent.conf"
 link ".gnupg/gpg.conf"
 
-link ".k9s/skin.yml"
-
 link ".local/bin/bujar"
 link ".local/bin/ch"
 link ".local/bin/client"
@@ -79,6 +77,8 @@ link ".local/bin/upjar"
 
 link ".local/etc/profile.d"
 link ".local/etc/profile"
+
+link "Library/Application Support/k9s/skin.yml"
 
 link ".bash_profile"
 link ".bashrc"
