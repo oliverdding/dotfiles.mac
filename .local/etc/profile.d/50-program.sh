@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# export DOCKER_BUILDKIT="1"
+export DOCKER_BUILDKIT="1"
+export DOCKER_HOST="unix:///Users/charmer/.colima/docker.sock"
 
 # export GOPROXY="https://goproxy.io,direct"
 
@@ -10,7 +11,7 @@
 export PASSWORD_STORE_CHARACTER_SET="a-zA-Z0-9~!@#$%^&*()-_=+[]{};:,.<>?"
 export PASSWORD_STORE_GENERATED_LENGTH="20"
 
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk17-zulu/Contents/Home/"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk8-zulu/Contents/Home/"
 
 # export SPARK_HOME="$HOME/.local/opt/spark/current"
 # export HADOOP_HOME="$HOME/.local/opt/spark/current"
