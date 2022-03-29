@@ -1,8 +1,5 @@
 #!/bin/sh
 
-export DOCKER_BUILDKIT="1"
-export DOCKER_HOST="unix:///Users/charmer/.colima/docker.sock"
-
 # export GOPROXY="https://goproxy.io,direct"
 
 # export RUSTUP_DIST_SERVER="https://rsproxy.cn"
