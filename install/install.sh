@@ -47,6 +47,7 @@ defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.clion ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false
 
+copy "etc/pam.d/sudo"
 copy "Library/LaunchDaemons/limit.maxfiles.plist"
 
 cat '/opt/local/bin/bash' >>/etc/shells
