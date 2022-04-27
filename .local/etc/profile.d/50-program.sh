@@ -13,6 +13,4 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk8-zulu/Contents/Home/
 # export SPARK_HOME="$HOME/.local/opt/spark/current"
 # export HADOOP_HOME="$HOME/.local/opt/spark/current"
 
-KUBECONFIG=$(echo $(ls ~/.kube/config.d/* 2>/dev/null) | sed 's/ /:/g')
-export KUBECONFIG="$KUBECONFIG"
-unset KUBECONFIG
+export KUBECONFIG="$(echo $(ls ~/.kube/config.d/* 2>/dev/null) | sed 's/ /:/g')"

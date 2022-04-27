@@ -50,7 +50,7 @@ defaults write com.jetbrains.goland ApplePressAndHoldEnabled -bool false
 copy "etc/pam.d/sudo"
 copy "Library/LaunchDaemons/limit.maxfiles.plist"
 
-cat '/opt/local/bin/bash' >>/etc/shells
-chsh -s /opt/local/bin/bash $USERNAME
+sudo sh -c 'echo /opt/local/bin/fish >> /etc/shells'
+sudo chpass -s /opt/local/bin/fish $USERNAME
 
 git clone git@github.com:oliverdding/pass.git ~/.password-store
