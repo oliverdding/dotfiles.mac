@@ -5,7 +5,7 @@ if [ "$(id -u)" -e 0 ]; then
         exit 1
 fi
 
-sudo port install -bcqN bash bash-completion bat bottom curl exa fd fzf atuin git git-delta gnupg2 less neovim pass ripgrep starship xplr zoxide zstd
+sudo port install -bcqN fish terminal-notifier bat bottom curl exa fd fzf atuin git git-delta gnupg2 less neovim pass ripgrep starship zoxide xplr zstd
 sudo port install -bcqN zola hexyl hurl dua-cli rmtrash onefetch ouch tokei
 sudo port install -bcqN kubectl-1.23 kubectl_select krew helm-2.15 helm-3.8 helm_select k9s kaf
 sudo port install -bcqN qemu docker docker-compose dive colima
