@@ -56,7 +56,15 @@ link ".config/alacritty/alacritty.yml"
 link ".config/bottom"
 link ".config/fd/ignore"
 link ".config/fish/conf.d"
+link ".config/fish/functions/bujar.fish"
+link ".config/fish/functions/ch.fish"
+link ".config/fish/functions/client.fish"
 link ".config/fish/functions/fish_user_key_bindings.fish"
+link ".config/fish/functions/k.fish"
+link ".config/fish/functions/llvm-objcopy.fish"
+link ".config/fish/functions/ls.fish"
+link ".config/fish/functions/readelf.fish"
+link ".config/fish/functions/upjar.fish"
 link ".config/fish/config.fish"
 link ".config/git/config"
 link ".config/git/common"
@@ -69,22 +77,7 @@ link ".gnupg/dirmngr.conf"
 # link ".gnupg/gpg-agent.conf"
 link ".gnupg/gpg.conf"
 
-link ".local/bin/bujar"
-link ".local/bin/ch"
-link ".local/bin/client"
-link ".local/bin/k"
-link ".local/bin/llvm-objcopy"
-link ".local/bin/ls"
-link ".local/bin/readelf"
-link ".local/bin/upjar"
-
-link ".local/etc/profile.d"
-link ".local/etc/profile"
-
 link "Library/Application Support/k9s/skin.yml"
-
-link ".bash_profile"
-link ".bashrc"
 
 chmod 700 $HOME/.ssh
 chmod 700 $HOME/.gnupg

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -e
-
-kubectl -n default exec -it deploy/kdl-client -- bash "$@"
