@@ -7,3 +7,6 @@
 [submodule ".config/alacritty"]
 	path = .config/alacritty
 	url = https://github.com/oliverdding/.config-alacritty.git
+[submodule ".ssh"]
+	path = .ssh
+	url = git@github.com:oliverdding/.ssh.git
