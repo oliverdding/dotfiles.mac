@@ -72,7 +72,6 @@ link ".config/git/config"
 link ".config/git/common"
 link ".config/git/ignore"
 # link ".config/pip/pip.conf"
-link ".config/bash_completion"
 link ".config/starship.toml"
 
 link ".gnupg/dirmngr.conf"

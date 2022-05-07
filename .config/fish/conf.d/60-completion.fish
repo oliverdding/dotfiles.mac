@@ -6,4 +6,5 @@ if status is-interactive
     type -q rustup && rustup completions fish | source
     type -q krew && krew completion fish | source
     type -q colima && colima completion fish | source
+    type -q starship && starship completions fish | source
 end
