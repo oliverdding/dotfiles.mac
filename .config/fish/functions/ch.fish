@@ -10,5 +10,5 @@ function ch -a target_cluster
             echo " Unknown target cluster '$target_cluster', only support 'gr', 'gd' and 'br' now."
             return 1
     end
-    ssh -t mixed-main-22 "exec clickhouse-client -h $HOST -u default -m \"$argv[2..-1]\""
+    ssh -t mixed-main-22 "exec clickhouse-client -h $HOST -u default -m $argv[2..-1]"
 end

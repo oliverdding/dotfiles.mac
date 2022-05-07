@@ -79,6 +79,9 @@ link ".gnupg/dirmngr.conf"
 # link ".gnupg/gpg-agent.conf"
 link ".gnupg/gpg.conf"
 
+link ".ssh/config.d"
+link ".ssh/config"
+
 link "Library/Application Support/k9s/skin.yml"
 
 chmod 700 $HOME/.ssh
