@@ -1,0 +1,3 @@
+#!/bin/sh
+
+lldb-vscode-mp-13 "$@"

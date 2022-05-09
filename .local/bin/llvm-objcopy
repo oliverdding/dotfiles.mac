@@ -1,0 +1,3 @@
+#!/bin/sh
+
+llvm-objcopy-mp-13 "$@"

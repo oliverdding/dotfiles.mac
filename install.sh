@@ -62,10 +62,7 @@ link ".config/fish/functions/client.fish"
 link ".config/fish/functions/fish_greeting.fish"
 link ".config/fish/functions/fish_user_key_bindings.fish"
 link ".config/fish/functions/k.fish"
-link ".config/fish/functions/lldb-vscode.fish"
-link ".config/fish/functions/llvm-objcopy.fish"
 link ".config/fish/functions/ls.fish"
-link ".config/fish/functions/readelf.fish"
 link ".config/fish/functions/upjar.fish"
 link ".config/fish/config.fish"
 link ".config/git/config"
@@ -79,6 +76,10 @@ link ".gnupg/dirmngr.conf"
 link ".gnupg/gpg.conf"
 # link ".gnupg/sshcontrol"
 
+link ".local/bin/lldb-vscode"
+link ".local/bin/llvm-objcopy"
+link ".local/bin/readelf"
+
 link ".ssh/config.d"
 link ".ssh/config"
 
@@ -87,6 +88,7 @@ link "Library/Application Support/k9s/skin.yml"
 chmod 700 $HOME/.ssh
 chmod 700 $HOME/.gnupg
 chmod 700 $HOME/.password-store
+chmod 755 $HOME/.local/bin/*
 
 echo "############################"
 echo "configure others dotfiles..."
