@@ -5,7 +5,7 @@ function upjar -a cluster -d "upload jar file of QAPM/emr to HDFS"
     end
 
     function upjar_deploy -a target_path
-        set -l CLIENT_POD $(kubectl -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
+        set -l CLIENT_POD (kubectl -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
         if not set -q CLIENT_POD
             echo "Cannot get client pod, is it running?"
             return 1
