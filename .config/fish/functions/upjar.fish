@@ -1,4 +1,4 @@
-function upjar -a cluster
+function upjar -a cluster -d "upload jar file of QAPM/emr to HDFS"
     if not set -q QAPM_HOME
         echo "Cannot find environment variable QAPM_HOME. Have you clone the repository?"
         return 1
