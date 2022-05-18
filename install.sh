@@ -82,6 +82,8 @@ link ".config/fish/config.fish"
 link ".config/git/config"
 link ".config/git/common"
 link ".config/git/ignore"
+link ".config/helix/config.toml"
+link ".config/helix/languages.toml"
 # link ".config/pip/pip.conf"
 link ".config/starship.toml"
 
