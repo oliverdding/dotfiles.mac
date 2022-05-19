@@ -33,8 +33,18 @@ function upjar -a cluster -d "upload jar file of QAPM/emr to HDFS"
             return 1
     end
     if test $status = 0
-        echo " Upload finished!"
+        terminal-notifier -title 'bujar' \
+            -subtitle '🥳' \
+            -group qapm \
+            -ignoreDnD \
+            -sender $__CFBundleIdentifier \
+            -message "upjar finished with jar file at $cluster cluster"
     else
-        echo " Upload failed!"
+        terminal-notifier -title 'upjar' \
+            -subtitle '☹️' \
+            -group qapm \
+            -ignoreDnD \
+            -sender $__CFBundleIdentifier \
+            -message "upjar failed with error code $statue"
     end
 end
