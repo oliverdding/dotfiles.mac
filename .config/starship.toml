@@ -1,3 +1,5 @@
+right_format = """$status"""
+
 add_newline = true
 
 [sudo]
@@ -12,3 +14,6 @@ threshold = 50
 
 [status]
 disabled = false
+
+[package]
+disabled = true
